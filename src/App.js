@@ -88,24 +88,24 @@ class App extends Component {
       let originNews = list[i];
 
       // parse the title
-      let title = originNews.title == null ? "" : originNews.title;
+      let title = originNews.title === null ? "" : originNews.title;
 
       // parse the author
-      let author = originNews.author == null ? "" : originNews.author;
+      let author = originNews.author === null ? "" : originNews.author;
 
       // parse the published date
       let publishedDate =
-        originNews.publishedAt == null ? "" : originNews.publishedAt;
+        originNews.publishedAt === null ? "" : originNews.publishedAt;
       if (publishedDate.length >= 10) {
         // just get the date, no time
         publishedDate = publishedDate.slice(0, 10);
       }
 
       // parse the image's url
-      let image = originNews.urlToImage == null ? "" : originNews.urlToImage;
+      let image = originNews.urlToImage === null ? "" : originNews.urlToImage;
 
       // parse the content
-      let content = originNews.content == null ? "" : originNews.content;
+      let content = originNews.content === null ? "" : originNews.content;
       if (content !== "") {
         // replace the "\r\n" to '<br/><br/>'
         content = content.replace(/\r\n/g, "<br/><br/>");
@@ -126,18 +126,18 @@ class App extends Component {
       } else {
         // if there is no content, then using description
         let description =
-          originNews.description == null ? "" : originNews.description;
+          originNews.description === null ? "" : originNews.description;
         content = description;
       }
 
       // parse the source
       let source = "";
-      if (originNews.source != null) {
-        source = originNews.source.name == null ? "" : originNews.source.name;
+      if (originNews.source !== null) {
+        source = originNews.source.name === null ? "" : originNews.source.name;
       }
 
       // parse the source url
-      let url = originNews.url == null ? "" : originNews.url;
+      let url = originNews.url === null ? "" : originNews.url;
       let news = {
         title,
         author,
@@ -194,24 +194,24 @@ class App extends Component {
       // parse the title
       let headline = originNews.headline;
       let title = "";
-      if (headline != null) {
-        title = headline.main == null ? "" : headline.main;
+      if (headline !== null) {
+        title = headline.main === null ? "" : headline.main;
         if (title === "") {
           title =
-            headline.print_headline == null ? "" : headline.print_headline;
+            headline.print_headline === null ? "" : headline.print_headline;
         }
       }
 
       // parse the author
       let byline = originNews.byline;
       let author = "";
-      if (byline != null) {
-        author = byline.original == null ? "" : byline.original;
+      if (byline !== null) {
+        author = byline.original === null ? "" : byline.original;
       }
 
       // parse the published date
       let publishedDate =
-        originNews.pub_date == null ? "" : originNews.pub_date;
+        originNews.pub_date === null ? "" : originNews.pub_date;
       if (publishedDate.length >= 10) {
         // just get the date, no time
         publishedDate = publishedDate.slice(0, 10);
@@ -220,29 +220,29 @@ class App extends Component {
       // parse the image's url
       let multimedia = originNews.multimedia;
       let image = "";
-      if (multimedia != null && multimedia.length > 0) {
+      if (multimedia !== null && multimedia.length > 0) {
         let imageUrl = "";
         if (multimedia.length >= 2) {
-          imageUrl = multimedia[0].url == null ? "" : multimedia[0].url;
+          imageUrl = multimedia[0].url === null ? "" : multimedia[0].url;
         } else {
-          imageUrl = multimedia[0].url == null ? "" : multimedia[0].url;
+          imageUrl = multimedia[0].url === null ? "" : multimedia[0].url;
         }
         image = nytImageBasePath + imageUrl;
       }
 
       // parse the content
       let content =
-        originNews.lead_paragraph == null ? "" : originNews.lead_paragraph;
+        originNews.lead_paragraph === null ? "" : originNews.lead_paragraph;
       if (content === "") {
         // if there is no content, then using abstract
-        content = originNews.abstract == null ? "" : originNews.abstract;
+        content = originNews.abstract === null ? "" : originNews.abstract;
       }
 
       // parse the source
-      let source = originNews.source == null ? "" : originNews.source;
+      let source = originNews.source === null ? "" : originNews.source;
 
       // parse the source url
-      let url = originNews.web_url == null ? "" : originNews.web_url;
+      let url = originNews.web_url === null ? "" : originNews.web_url;
       nytListParsed.push({
         title,
         author,
@@ -284,7 +284,7 @@ class App extends Component {
 
   render() {
     let news = this.state.renderList[this.state.currentNewsIndex];
-    if (news == undefined) {
+    if (news === undefined) {
       news = {
         title: "",
         author: "",
