@@ -1,0 +1,55 @@
+.news_main_middle {
+  margin: 1% 10% 0 10%;
+  padding: 0;
+  grid-row: 1;
+  grid-column: 2;
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr 6fr 6fr;
+  grid-template-columns: 1fr;
+}
+
+.news_title {
+  grid-row: 1;
+  grid-column: 1;
+  margin: 1% 5%;
+  height: 6vh;
+  font-weight: bolder;
+}
+
+.news_author_publishedDate {
+  grid-row: 2;
+  grid-column: 1;
+  margin: 1% 5%;
+  height: 2vh;
+  font-weight: lighter;
+}
+
+.news_publishedDate {
+  font-weight: 100;
+}
+
+.news_source_url {
+  grid-row: 3;
+  grid-column: 1;
+  margin: 0 5% 1% 5%;
+  height: 2vh;
+  font-weight: lighter;
+}
+
+.news_image {
+  grid-row: 4;
+  grid-column: 1;
+  margin: 0 20% 1% 20%;
+  height: 24vh;
+  background: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.news_content {
+  grid-row: 5;
+  grid-column: 1;
+  margin: 1% 5%;
+  height: 18vh;
+}
