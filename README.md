@@ -1,6 +1,6 @@
 # React UI Pattern
 
-Build out user interfaces with HTML, react and CSS. The UI follows one UI Pattern, the data to populate the UI Pattern comes from the API.
+Build out user interfaces with React, HTML, and CSS. The UI follows one UI Pattern, the data to populate the UI Pattern comes from the API.
 
 ## Requirements
 
