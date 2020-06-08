@@ -8,9 +8,9 @@ Combine the UI Pattern and API. The data to populate the UI Pattern comes from t
 
 ## Implement technologies
 
-1. Html
-2. CSS
-3. React
+1. React
+2. Html
+3. CSS
 
 ## Features
 
